@@ -314,7 +314,7 @@ Future<XcodeBuildResult> buildXcodeProject({
   }
 
   if (buildForDevice) {
-    buildCommands.addAll(<String>['-sdk', 'iphoneos']);
+    buildCommands.addAll(<String>['-sdk', 'iphoneos', '-arch', 'x86_64']);
   } else {
     buildCommands.addAll(<String>['-sdk', 'iphonesimulator', '-arch', 'x86_64']);
   }
